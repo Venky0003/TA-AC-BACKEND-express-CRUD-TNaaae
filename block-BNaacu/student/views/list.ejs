@@ -7,10 +7,11 @@
     <title>Document</title>
   </head>
   <body>
-    <form action="/students" method="POST">
-      <input type="text" name="name" placeholder="Enter student name" />
-      <input type="text" name="email" placeholder="Enter student email" />
-      <input type="submit"/>
-    </form>
+    <h1>List of students</h1>
+    <ul>
+      <% list.forEach(name => { %>
+      <li><%= name %></li>
+      <% }) %>
+    </ul>
   </body>
 </html>
