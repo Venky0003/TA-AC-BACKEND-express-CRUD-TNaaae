@@ -11,10 +11,13 @@ router.get('/new', (req, res) => {
 });
 
 router.post('/', (req, res) => {
-  User.create(req.body).then((result) => {
-    res.send({ clt: result, msg: 'added user successfully' });
-    res.redirect('/users');
-  });
+  User.create(req.body)
+    .then((result) => {
+      res.redirect('/');
+    })
+    .catch((err) => {
+      if (err) return res.redirect('users/new');
+    });
 });
 
 module.exports = router;
