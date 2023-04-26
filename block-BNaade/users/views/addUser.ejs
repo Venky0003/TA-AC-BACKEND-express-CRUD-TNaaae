@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container flex justify-between align-center">
+        <h1>Add Users to List</h1>
+        <nav>
+          <a href="/users">Back To List</a>
+        </nav>
+      </div>
+    </header>
+    <div class="container text-center">
+      <form action="/users" class="form-box" method="POST">
+        <h4 class="form-head">Enter User Details</h4>
+        <input
+          type="text"
+          class="form-control"
+          name="name"
+          placeholder="Enter Name"
+        />
+        <input
+          type="text"
+          class="form-control"
+          name="email"
+          placeholder="Enter Email"
+        />
+        <input
+          type="Number"
+          class="form-control"
+          name="age"
+          placeholder="Enter age"
+        />
+        <div>
+          <input class="btn" type="submit" value="Add User" />
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
